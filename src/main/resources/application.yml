@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud-config
+  zipkin:
+    base-url: http://localhost:9411
+
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/subhacker/global-config
+          search-paths: global-config
+          username: subhacker@163.com
+          password: wbuntu@000
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
